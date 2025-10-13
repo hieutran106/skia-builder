@@ -94,7 +94,7 @@ void draw(SkCanvas* canvas) {
     canvas->drawPath(triangle, p);
 
     // line
-    const SkPoint pts[2] = {{160.0f, 290.0f}, {341.0f, 290.0f}};
+    /*const SkPoint pts[2] = {{160.0f, 290.0f}, {341.0f, 290.0f}};
     p.setShader(SkGradientShader::MakeLinear(pts, lineColors, nullptr, 2, SkTileMode::kClamp));
     if (true) {
         SkRRect rrect;
@@ -104,7 +104,7 @@ void draw(SkCanvas* canvas) {
         SkPath path;
         path.addRoundRect({138.0f, 291.0f, 341.0f, 299.95f}, 25.0f, 5.0f);
         canvas->drawPath(path, p);
-    }
+    }*/
 }
 
 int main() {

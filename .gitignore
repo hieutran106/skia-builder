@@ -5,3 +5,6 @@ example/build
 example/.cache
 .vs
 example/build-*
+.idea/
+example/.idea
+example/out

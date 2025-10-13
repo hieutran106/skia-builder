@@ -76,5 +76,9 @@ On Windows, you need to install LLVM in order to compile Skia with clang, as rec
 LLVM should be installed in `C:\Program Files\LLVM\`
 
 ```bash
-py -3 build-skia.py -config Release -branch chrome/m129 win
+python build-skia.py -config Debug -branch chrome/m129 win
+```
+
+```bash
+python build-skia.py -config Release -branch chrome/m129 win
 ```
