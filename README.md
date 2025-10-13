@@ -7,6 +7,23 @@ This is a python script and github actions workflow to manage building static li
 The script automates the process of building the libraries for various platforms (macOS, iOS, Windows, WASM). It handles the setup of the build environment, cloning of the Skia repository, configuration of build parameters, and compilation. The script also includes functionality for creating universal binaries for macOS and an XCFramework for apple platforms.
 
 The GN Args are supplied in constants which you will need to tweak if you want to modify the build.
+## Requirements
+
+On Window
+- Ninja
+- Clang CL 
+- Python3 (from microsoft store) (because the built tool run command python3)
+
+To create symbol link on windows
+
+To create a python3 command alias manually:
+
+    Open an elevated Command Prompt or PowerShell.
+
+    Create a symbolic link named python3.exe pointing to python.exe, for example:
+
+text
+mklink "%USERPROFILE%\AppData\Local\Microsoft\WindowsApps\python3.exe" "%USERPROFILE%\AppData\Local\Microsoft\WindowsApps\python.exe"
 
 ## Building
 

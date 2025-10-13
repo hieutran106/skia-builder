@@ -20,12 +20,15 @@ elseif(WIN32)
         set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded")
         set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /MT")
     endif()
-    
+
+    message(STATUS "HT: CMAKE_GENERATOR_PLATFORM: ${CMAKE_GENERATOR_PLATFORM}")
     if(CMAKE_GENERATOR_PLATFORM STREQUAL "x64")
         set(ARCH_DIR "x64")
     else()
         set(ARCH_DIR "Win32")
     endif()
+    set(ARCH_DIR "x64")
+    message(STATUS "HT: ARCH_DIR: ${ARCH_DIR}")
     
 elseif(APPLE)
     # macOS-specific settings
@@ -56,6 +59,7 @@ if(EMSCRIPTEN)
     set(SKIA_LIB ${LIB_DIR}/libskia.a)
 elseif(WIN32)
     set(LIB_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../build/win/lib/${CMAKE_BUILD_TYPE}/${ARCH_DIR})
+    message(STATUS "HT LIB_DIR:${LIB_DIR}")
     find_library(SKIA_LIB skia PATHS ${LIB_DIR} NO_DEFAULT_PATH REQUIRED)
     
     if(NOT SKIA_LIB)
