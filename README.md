@@ -10,20 +10,18 @@ The GN Args are supplied in constants which you will need to tweak if you want t
 ## Requirements
 
 On Window
+- Git
 - Ninja
 - Clang CL 
 - Python3 (from microsoft store) (because the built tool run command python3)
 
-To create symbol link on windows
+To find where python: `Get-Command python` in Powershell
 
-To create a python3 command alias manually:
+To create a python3 symbol link on windows manually:
 
-    Open an elevated Command Prompt or PowerShell.
+Open command Prompt as Admin
 
-    Create a symbolic link named python3.exe pointing to python.exe, for example:
-
-text
-mklink "%USERPROFILE%\AppData\Local\Microsoft\WindowsApps\python3.exe" "%USERPROFILE%\AppData\Local\Microsoft\WindowsApps\python.exe"
+`mklink C:\Users\hieutran\AppData\Local\Programs\Python\Python314\python3.exe C:\Users\hieutran\AppData\Local\Programs\Python\Python314\python.exe`
 
 ## Building
 
