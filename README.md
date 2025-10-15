@@ -65,6 +65,17 @@ ulimit -n 2048
 ```
 
 in order to increase the number of files that can be opened at once.
+### Build for macOS arm64
+
+```bash
+python3 build-skia.py -config Debug -branch chrome/m141 -archs arm64 mac
+```
+
+### Build for iOS arm64
+
+```bash
+python3 build-skia.py -config Debug -branch chrome/m141 -archs arm64 ios
+```
 
 ### Build for macOS universal (arm64 & x86_64 intel)
 
